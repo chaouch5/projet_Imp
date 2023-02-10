@@ -1,0 +1,79 @@
+<br><br>
+
+<ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+  <div ngxSlickItem *ngFor="let p of promos" class="slide text-center">
+    <img class="imgslidER" src="{{imgPath}}{{ p.photo }}" alt=""  style="width: 1900px; height: 550px">
+  </div>
+</ngx-slick-carousel>
+
+
+
+        <div class="latest-products">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="section-heading">
+                  <br><br>
+                  <div class="main-button"><a rel="nofollow" routerLink="/produits" target="_parent"
+                      style="color: white;">Tout
+                      les produits >></a></div>
+
+                </div>
+
+              </div>
+
+              <h2>Les derniers produits </h2>
+
+              <div class="col-md-4" *ngFor="let p of produit">
+                <div class="image">
+                  <div class="product-item">
+                    <img style="height: 370px;" src="{{imgPath}}{{p.photo}}" alt="">
+                    <div class="image__overlay image__overlay--primary">
+
+                      <!-- Product details-->
+                      <div class="card-body p-4">
+                        <div class="text-center">
+                          <!-- Product name-->
+                          <div class="image__title">
+                            <h5 class="fw-bolder">{{p.nom}}</h5>
+                          </div>
+                          <!-- Product price-->
+                          {{p.prix}}DT
+                          <br>
+                          <p class="image__description">
+                          <h6 class="fw-bolder">{{p.description}}</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <section class="section video" data-section="section5">
+            <div class="container" *ngFor="let a of actualite">
+              <div class="row">
+                <div class="col-md-6 align-self-center">
+                  <div class="left-content">
+
+                    <h4><em>{{a.titre}}</em></h4>
+                    <p>{{a.text}}</p>
+                    <div class="main-button"><a rel="nofollow" routerLink="/actualites" target="_parent">Toute les
+                        actualités
+                        >></a></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <article class="video-item">
+
+                    <figure>
+                      <img src="{{imgPath}}{{a.photo}}">
+                    </figure>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </section>

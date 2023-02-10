@@ -1,0 +1,25 @@
+<section class="actualite">
+
+
+<br><br><br>
+<br><br><br><br>
+<br><br><br>
+<section class="articles">
+
+    <div *ngFor="let a of actualite">
+<div class="article">
+  <div class="container px-2 px-lg-5 mt-5">
+
+  <div class="left p-9"> 
+    <img src="{{imageDirectoryPath}}{{a.photo}}" width="200" height="200">
+   </div>
+    <h3 class="titre"  >{{a.titre}}</h3>
+    <p class="description" >{{a.text}}</p>
+
+
+</div>
+</div>
+</div>
+</section>
+
+</section>

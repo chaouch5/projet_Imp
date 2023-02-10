@@ -1,0 +1,69 @@
+<br><br><br>    
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+</head>
+
+
+
+    <div class="container">
+        <div class="card">
+            <div class="container-fliud">
+                <div class="wrapper row">
+                    <div class="preview col-md-6">
+
+                        <div class="preview-pic tab-content">
+                            <div *ngFor="let p of data ">
+                                <div class="tab-pane active" id="pic-1"> <img  src="{{imageDirectoryPath}}{{p.photo}}" alt="..."
+                                        style="width: 600px; height: 350px" />
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <div class="details col-md-6">
+                            <div *ngFor="let p of data ">
+                            <h3 class="product-title"> {{p.nom}}</h3>
+                        </div>
+                        <div *ngFor="let p of data ">
+                            <p class="product-description"> <h4>{{p.description}}</h4>
+                           
+                        </div>
+                        <div *ngFor="let p of data ">
+                            <p class="product-description">{{p.fiche}}
+                            </p>
+                        </div>
+                        <div *ngFor="let p of data ">
+                            <h4 class="price">Prix: <span>{{p.prix}}DT</span></h4>
+                        </div>
+                        <div *ngFor="let p of data ">
+                            <h4 class="price">référence: <span>{{p.ref}}</span></h4>
+                        </div>
+
+                            <div class="action">
+                                <button class="add-to-cart btn btn-default" type="button" routerLink="/produits" >Retour</button>
+                                <button class="like btn btn-default" type="button" routerLink="/produits"><span
+                                        class="fa fa-arrow-circle-left" ></span></button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<br><br><br>
+</html>

@@ -1,0 +1,102 @@
+
+
+<section class="section contact" data-section="section6" >
+    <div class="container" >
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            
+          </div>
+          <br><br><br><br>
+        </div>
+        <div class="col-md-6">
+        
+        <!-- Do you need a working HTML contact-form script?
+                	
+                    Please visit https://templatemo.com/contact page -->
+                    <h1 style="color: #fff; ">Ouvrir un ticket de réparation </h1>
+          <form #frm="ngForm" (ngSubmit)="saveReclamation(frm.value)">
+            
+            <div class="row">
+             
+              <div class="col-md-6">
+                  <fieldset>
+                    <input type="text"  id="name" placeholder="Votre nom" required=""  name="nom" ngModel >
+                  </fieldset>
+                </div>
+                <div class="col-md-6">
+                  <fieldset>
+                    <input  type="text"  id="email" placeholder="Votre Email" required  name="email"  ngModel>
+                  </fieldset>
+                </div>
+                <div class="col-md-6">
+                  <fieldset>
+                    <input type="text"  id="machine" placeholder="Votre machine" required=""  name="machine" ngModel >
+                  </fieldset>
+                </div>
+              <div class="col-md-12">
+                <fieldset>
+                  <textarea name="message" rows="6"  id="message" placeholder="votre message..." required="" name="message" ngModel></textarea>
+                </fieldset>
+              </div>
+              <div class="col-md-12">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="button" onclick="alert('email envoyer')" >envoyer</button>
+                </fieldset>
+              </div>
+            </div>
+            
+      
+          </form>
+          <script>
+            document.forms[0].addEventListener("form-submit", function(evenement) { 
+                if (document.getElementById("email").value == "") {
+                    evenement.preventDefault();
+                    alert("Tapez un email valable pour avoir une réponse.");
+                    document.getElementById("email").focus();
+                }
+                else if (document.getElementById("message").value == "") {
+                    evenement.preventDefault();
+                    alert("Pensez à taper un message !");
+                    document.getElementById("message").focus();
+                }
+            });
+        </script>
+        </div>
+        <div class="col-md-6">
+
+          <!-- Do you need a working HTML contact-form script?
+  
+                      Please visit https://templatemo.com/contact page -->
+                      <h1 style="color: #fff; ">Faire une réclamation</h1>
+            <form #form="ngForm" (ngSubmit)="saveFeedback(form.value)" >
+              <div class="row">
+                <div class="col-md-6">
+                    <fieldset>
+                      <input type="text"  id="name" placeholder="Nom" required  name="nom" ngModel >
+                    </fieldset>
+                  </div>
+                  <div class="col-md-6">
+                    <fieldset>
+                      <input  type="text"  id="email" placeholder=" Email" required="" name="email" ngModel>
+                    </fieldset>
+                  </div>
+                <div class="col-md-12">
+                  <fieldset>
+                    <textarea name="feedback" rows="6"  id="feedback" placeholder="Votre message ..." required="" name="feedback" ngModel></textarea>
+                  </fieldset>
+                </div>
+                <div class="col-md-12">
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="button" >Envoyer</button>
+                  </fieldset>
+                </div>
+              </div>
+            </form>
+          </div>
+   
+      </div>
+    </div>
+  </section>
+
+

@@ -1,0 +1,23 @@
+
+
+  @media screen and (min-width:300px) and (max-width:479px) {  
+ 
+   .viedoslider {
+    
+        max-width : 350px;
+        max-height : 300px;
+        
+  }
+  }
+
+
+  .viedoslider{
+    width: 600px;
+    height: 500px;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    float: left;
+    shape-outside: circle();
+    margin: 30px;
+    
+  }

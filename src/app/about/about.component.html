@@ -1,0 +1,38 @@
+
+ <section class="section why-us" data-section="section2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2 style="color:#000 ;">Qui somme-nous ?</h2>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div id='tabs'>
+           
+            <section class='tabs-content'>
+              <article id='tabs-1'>
+                <div *ngFor="let p of about">
+                <div class="row">
+                  <div class="col-md-6">
+                    <video class="viedoslider"   autoplay muted>
+                      <source src="{{pathImg}}{{p.photo}}" type="video/mp4">
+                  </video>
+                  </div>
+                  <div class="col-md-4">
+                    <h4 style="color: #fff;">{{p.titre}}</h4>
+                    <p>{{p.text}}</p>
+                  </div>
+                </div>
+                </div>
+              </article>
+             
+            
+            </section>
+          </div>
+        </div>
+      </div>
+ 
+     
+  </div>
+  </section>

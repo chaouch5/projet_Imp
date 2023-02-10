@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<br><br><br><br>
+<section class="section produit" data-section="section6" >
+<header>
+    <div class="my-2 w-25">
+        <label for="" class="my-1">
+            <h3 class="ffl">Filter</h3>
+        </label>
+        <select class="form-control" (change)="filtercat($event)">
+            <option value="all" selected>
+                <h4>Tous nos produits</h4>
+            </option>
+            <option value="{{c.id}}" *ngFor="let c of categorie ">{{c.nomC}}</option>
+        </select>
+    </div>
+</header>
+
+
+
+<section class="py-5">
+    <div class="container px-5 px-lg-6 mt-6">
+
+        <div class="row gx-3 gx-lg-3 row-cols-1 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div *ngFor="let p of produit ">
+                <div class="col mb-5">
+
+                    <div class="card h-100">
+                        <!-- Product image-->
+
+                        <div class="image">
+
+                            <img class="image__img" src="{{imageDirectoryPath}}{{p.photo}}" alt="..."
+                                style="width: 261px; height: 250px" />
+                            <div class="image__overlay image__overlay--primary">
+
+                                <!-- Product details-->
+                                <div class="card-body p-4">
+                                    <div class="text-center">
+                                        <!-- Product name-->
+                                        <div class="image__title">
+                                            <h5 class="fw-bolder">{{p.nom}}</h5>
+                                        </div>
+                                        <!-- Product price-->
+                                        {{p.prix}}DT
+                                        <br>
+                                        <p class="image__description">
+                                        <h6 class="fw-bolder">{{p.description}}</h6>
+                                        <div class="main-button"><a rel="nofollow" routerLink="/show/{{p.id}}" 
+                                            style="color: white;">plus de details</a></div>
+                                           
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+</section>
+
+</section>
+</html>

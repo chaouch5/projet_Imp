@@ -1,0 +1,44 @@
+<section class="section contact" data-section="section6" >
+    <div class="container" >
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+           
+          </div>
+          <br><br><br><br>
+        </div>
+        <div class="col-md-6">
+
+        <!-- Do you need a working HTML contact-form script?
+
+                    Please visit https://templatemo.com/contact page -->
+
+          <form #frm="ngForm" (ngSubmit)="saveFeedback(frm.value)">
+            <div class="row">
+              <div class="col-md-6">
+                  <fieldset>
+                    <input type="text"  id="name" placeholder="Nom" required  name="nom" ngModel >
+                  </fieldset>
+                </div>
+                <div class="col-md-6">
+                  <fieldset>
+                    <input  type="text"  id="email" placeholder=" Email" required="" name="email" ngModel>
+                  </fieldset>
+                </div>
+              <div class="col-md-12">
+                <fieldset>
+                  <textarea name="feedback" rows="6"  id="feedback" placeholder="Votre message ..." required="" name="feedback" ngModel></textarea>
+                </fieldset>
+              </div>
+              <div class="col-md-12">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="button" >Envoyer</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
